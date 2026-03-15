@@ -1,34 +1,42 @@
+# Результати бізнес-питань (CSV)
+results/
+
+# Дані IMDb (parquet)
+processed_imdb/
+data/
+*.parquet
+
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+.Python
+*.egg
 *.egg-info/
 dist/
 build/
+.eggs/
 
-# Virtual environment
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Віртуальне середовище
 .venv/
 venv/
+env/
 
-# IDE
-.vscode/
-.idea/
+# Spark
+derby.log
+metastore_db/
+spark-warehouse/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Spark
-spark-warehouse/
-metastore_db/
-derby.log
-
-# Data
-data/
-*.parquet
-*.csv
-*.json
+# IDE
+.idea/
+.vscode/
+*.iml
