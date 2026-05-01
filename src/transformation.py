@@ -1,10 +1,3 @@
-"""
-src/transformation.py
-=====================
-Етап трансформації для IMDb dataset.
-6 бізнес-питань з filter / join / groupBy / window functions.
-"""
-
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
 

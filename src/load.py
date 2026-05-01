@@ -1,8 +1,3 @@
-"""
-Етап запису результатів для IMDb dataset.
-Зберігає відповіді на 6 бізнес-питань у файли .csv
-"""
-
 import os
 
 SEPARATOR = "=" * 70
@@ -12,12 +7,8 @@ OUTPUT_DIR = "results"
 def section(title: str):
     print(f"\n{SEPARATOR}\n  {title}\n{SEPARATOR}")
 
-
 def save_result(df, name: str, output_dir: str = OUTPUT_DIR):
-    """
-    Зберігає DataFrame у єдиний .csv файл.
-    coalesce(1) об'єднує всі партиції в один файл перед записом.
-    """
+
     path = os.path.join(output_dir, name)
 
     (
@@ -53,6 +44,6 @@ def run_writing(results: dict, output_dir: str = OUTPUT_DIR):
         if df is not None:
             save_result(df, folder_name, output_dir)
         else:
-            print(f"  ⚠ Пропущено (не знайдено): {key}")
+            print(f"  Пропущено (не знайдено): {key}")
 
-    print(f"\n  ✅ Усі результати збережено у папку '{output_dir}/'")
+    print(f"\n Усі результати збережено у папку '{output_dir}/'")

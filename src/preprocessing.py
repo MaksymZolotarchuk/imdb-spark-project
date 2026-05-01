@@ -1,9 +1,3 @@
-"""
-src/preprocessing.py
-====================
-Попередня обробка IMDB датасетів на PySpark.
-"""
-
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql.types import (
